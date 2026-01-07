@@ -1,0 +1,404 @@
+/* ===========================================
+   HEADER & LOGO
+   =========================================== */
+.header-logo{
+  display: inline-block;
+  max-width: 600px;
+  margin-top: -20px;
+}
+
+.header-logo-image{
+  height: 150px !important;
+  width: auto !important;
+  max-width: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Tablet */
+@media (max-width: 991px){
+  .header-logo{
+    max-width: 450px;
+    margin-top: -15px;
+  }
+  .header-logo-image{
+    height: 110px !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px){
+  .header-logo{
+    max-width: 350px;
+    margin-top: -10px;
+  }
+  .header-logo-image{
+    height: 85px !important;
+  }
+}
+
+/* ===========================================
+   LIFESTYLE IMAGES SECTION
+   =========================================== */
+.lifestyle-full-image{
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  border-radius: 24px;
+}
+
+.lifestyle-full-image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ===========================================
+   FEATURE SECTION X (Sticky Image)
+   =========================================== */
+.feature-section-x .fx-image-container{
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  z-index: 5;
+}
+
+.feature-section-x .fx-image{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: translateY(-180px);
+}
+
+/* Tablet */
+@media (max-width: 991px){
+  .feature-section-x .fx-image{
+    transform: translateY(-140px);
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px){
+  .feature-section-x .fx-image{
+    transform: translateY(-90px);
+  }
+}
+
+.feature-section-x .fx-content-container{
+  position: relative;
+  z-index: 1;
+  margin-top: -20vh;
+  padding-top: 20vh;
+}
+
+/* ===========================================
+   KARTX UP (FINAL: linksbündig + Badges direkt unter CTA)
+   =========================================== */
+#kartx-up.kartx-up{
+  background: #6b63c7;
+  color: #c8f6ef;
+  padding: 6px 0;
+}
+
+#kartx-up .kartx-up__container{
+  width: min(1200px, 92%);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 48px;
+  align-items: center;
+}
+
+/* LEFT: macht alles stabil links (Theme-Centering killen) */
+#kartx-up .kartx-up__left{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;     /* << wichtig */
+  justify-self: start;         /* Grid: nicht mittig */
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
+/* Text */
+#kartx-up .kartx-up__pretitle{
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+  line-height: 1.15;
+  color: #c8f6ef;
+}
+
+#kartx-up .kartx-up__title{
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 60px;
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: -1px;
+  margin: 0 0 10px 0;
+  color: #c8f6ef;
+}
+
+#kartx-up .kartx-up__icon{
+  width: 110px;
+  height: 110px;
+  flex: 0 0 110px;
+  object-fit: contain;
+  display: block;
+}
+
+#kartx-up .kartx-up__list{
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 0 0 16px 0;          /* Abstand Text -> Button */
+  color: #c8f6ef;
+}
+
+#kartx-up .kartx-up__list strong{
+  color: #ffffff;
+}
+
+/* CTA */
+#kartx-up .kartx-up__btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  color: #6b63c7;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 1;
+  padding: 10px 18px;
+  border-radius: 2px;
+  text-decoration: none;
+
+  margin: 0 0 10px 0;          /* Abstand Button -> Badges */
+}
+
+/* Badges: immer direkt unter Button, links bündig */
+#kartx-up .kartx-up__download{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+
+  margin: 0;
+  padding: 0;
+
+  width: auto;                 /* kein Stretch */
+  align-self: flex-start;      /* sicher links */
+}
+
+/* Falls du noch <a> drum hast: komplett neutralisieren */
+#kartx-up .kartx-up__download a{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  line-height: 0;
+  height: auto;
+}
+
+/* Badge-Größe – greift IMMER (auch ohne .kartx-up__badge im HTML) */
+#kartx-up .kartx-up__download img{
+  height: 120px;               /* <- hier stellst du Größe ein */
+  width: auto;
+  display: block;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* RIGHT */
+#kartx-up .kartx-up__right{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#kartx-up .kartx-up__visual{
+  width: min(560px, 100%);
+  height: auto;
+  display: block;
+  transform: translateY(-28px);
+}
+
+/* Responsive */
+@media (max-width: 992px){
+  #kartx-up .kartx-up__container{
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  #kartx-up .kartx-up__left{
+    align-items: center;
+    justify-self: center;
+    text-align: center;
+  }
+
+  #kartx-up .kartx-up__title{
+    justify-content: center;
+  }
+
+  #kartx-up .kartx-up__download{
+    justify-content: center;
+    align-self: center;
+  }
+}
+
+/* ===========================================
+   SS CATEGORIES
+   =========================================== */
+.ss-categories{
+  margin-top: 40px;
+}
+
+.ss-category{
+  padding: 34px 28px;
+  border-bottom: 1px solid rgba(0,0,0,0.35);
+}
+
+.ss-c-title{
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 14px;
+}
+
+.ss-c-title img{
+  width: 58px !important;
+  height: 58px !important;
+  display: block;
+}
+
+.ss-c-title-text{
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.ss-points-list{
+  margin: 0;
+  padding-left: 18px;
+  max-width: 320px;
+}
+
+.ss-points-list li{
+  margin: 6px 0;
+  line-height: 1.5;
+  font-size: 15px;
+}
+
+/* ===== MOBILE FIX: Product Hero Header nicht kollabieren lassen ===== */
+@media (max-width: 768px){
+
+  /* der komplette obere Kopfbereich */
+  #product-hero .ph-header{
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 10px !important;
+  }
+
+  /* deine zwei "inline-block-fix" Blöcke sollen volle Breite haben */
+  #product-hero .ph-header .inline-block-fix{
+    width: 100% !important;
+    display: block !important;
+  }
+
+  /* Titel + Preis sollen NICHT übereinander crashen */
+  #product-hero .ph-h-name{
+    margin: 0 !important;
+    line-height: 1.1 !important;
+    word-break: keep-all;
+  }
+
+  #product-hero .ph-h-price{
+    margin-top: 6px !important;
+  }
+
+  /* Buttons sollen nicht in eine Zeile gequetscht werden */
+  #product-hero .ph-h-buttons{
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    justify-content: flex-start !important;
+    width: 100% !important;
+  }
+
+  #product-hero .ph-h-buttons .header-button{
+    margin: 0 !important;            /* killt theme margins */
+    white-space: nowrap;
+  }
+
+  /* Abstand nach unten, damit Text nicht am nächsten Banner klebt */
+  #product-hero .ph-content{
+    margin-top: 14px !important;
+  }
+}
+
+.video-section{
+  background-color: #6cccdb;
+  padding: 80px 0;     /* 🔑 sorgt dafür, dass Banner sichtbar bleibt */
+}
+
+.vs-video{
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  margin: 40px auto 0;
+}
+
+.vimeo-embed{
+  position: relative;
+  padding-top: 56.25%; /* 16:9 */
+}
+
+.vimeo-embed iframe{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* ===== FIX: Logo-Zeilen dürfen NICHT überlappen ===== */
+/* Passe die Selector-Namen ggf. an, falls deine Klassen anders heißen */
+
+.site-logo,
+.header-logo,
+.logo,
+.brand-logo {
+  display: inline-block !important;
+  position: relative !important;
+}
+
+/* Falls du 3 einzelne Elemente hast (z.B. .logo-kartx / .logo-linhipop / .logo-pmg) */
+.logo-kartx,
+.logo-linhipop,
+.logo-pmg {
+  display: block !important;          /* untereinander */
+  position: static !important;        /* killt absolute/fixed */
+  transform: none !important;         /* killt translateY */
+  margin: 0 !important;               /* killt negative margins */
+  padding: 0 !important;
+  line-height: 1.15 !important;       /* genug Höhe, damit nix schneidet */
+  white-space: nowrap !important;     /* nicht umbrechen */
+}
+
+/* kleiner Abstand zwischen den Zeilen */
+.logo-linhipop { margin-top: 2px !important; }
+.logo-pmg      { margin-top: 2px !important; }
+
+/* Mobile: noch etwas mehr Luft */
+@media (max-width: 768px){
+  .logo-kartx, .logo-linhipop, .logo-pmg{
+    line-height: 1.25 !important;
+  }
+}
